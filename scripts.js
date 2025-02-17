@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+ document.addEventListener("DOMContentLoaded", () => {
     // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -167,19 +167,3 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.add('show'); // Show the modal
         });
     });
-
-    // Remove this entire block:
-    /*
-    closeBtn.addEventListener('click', () => {
-        modal.classList.remove('show'); // Hide the modal
-    });
-    */
-
-    // Close modal if clicked outside the content area (on the overlay)
-    modal.addEventListener('click', (event) => {
-        if (event.target === modal) { // Check if the click is on the overlay
-            modal.classList.remove('show');
-        }
-    });
-});
-
