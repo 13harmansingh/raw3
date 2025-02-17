@@ -142,4 +142,15 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(element);
     });
 });
+const menuLinks = document.querySelectorAll('nav ul li a');
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        // Prevent default link behavior (if needed)
+        event.preventDefault();
+
+        // Add your click effect here (e.g., change color, scale, etc.)
+        link.style.color = 'green';
+    });
+});
 
