@@ -142,6 +142,7 @@
         observer.observe(element);
     });
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     const cocktailItems = document.querySelectorAll('.cocktail-item');
     const modal = document.querySelector('.cocktail-modal');
@@ -167,3 +168,12 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.add('show'); // Show the modal
         });
     });
+
+
+    // Close modal if clicked outside the content area (on the overlay)
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) { // Check if the click is on the overlay
+            modal.classList.remove('show');
+        }
+    });
+});
