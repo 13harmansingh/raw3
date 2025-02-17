@@ -131,6 +131,59 @@ header nav ul li a:hover {
     background-color: #d14a3c;
     transform: translateY(-3px);
 }
+/* Cocktail Modal Styles */
+.cocktail-modal {
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
+    display: none; /* Hidden by default */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.cocktail-modal.show {
+    display: flex; /* Show when the 'show' class is added */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be adjusted as needed */
+    max-width: 600px; /* Limit width on larger screens */
+    border-radius: 8px;
+    position: relative; /* For positioning the close button */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Center image and add spacing below */
+}
+
+.modal-title {
+    margin-bottom: 10px;
+}
+
+.modal-ingredients, .modal-recipe {
+    margin-bottom: 20px;
+}
+
 
 /* About Us Section */
 .about {
