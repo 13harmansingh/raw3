@@ -90,7 +90,46 @@
         },
         // ... add more cocktails here
     };
+document.addEventListener('DOMContentLoaded', () => {
+    const cocktailItems = document.querySelectorAll('.cocktail-item');
+    const modal = document.querySelector('.cocktail-modal');
+    const modalContent = document.querySelector('.modal-content'); // Keep this selector
+    // const closeBtn = document.querySelector('.close-btn');     // Remove this line
+    const modalImage = document.querySelector('.modal-image');
+    const modalTitle = document.querySelector('.modal-title');
+    const modalIngredients = document.querySelector('.modal-ingredients');
+    const modalRecipe = document.querySelector('.modal-recipe');
 
+    cocktailItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const imageSrc = item.querySelector('img').src;
+            const title = item.querySelector('h3').textContent;
+            const ingredients = item.querySelector('p').textContent; // Replace with actual ingredients data
+            const recipe = "Your recipe goes here."; // Replace with actual recipe data
+
+            modalImage.src = imageSrc;
+            modalTitle.textContent = title;
+            modalIngredients.textContent = ingredients;
+            modalRecipe.textContent = recipe;
+
+            modal.classList.add('show'); // Show the modal
+        });
+    });
+
+    // Remove this entire block:
+    /*
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('show'); // Hide the modal
+    });
+    */
+
+    // Close modal if clicked outside the content area (on the overlay)
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) { // Check if the click is on the overlay
+            modal.classList.remove('show');
+        }
+    });
+});
 
     cocktailItems.forEach(item => {
         item.addEventListener("click", () => {
@@ -142,44 +181,5 @@
         observer.observe(element);
     });
 });
-document.addEventListener('DOMContentLoaded', () => {
-    const cocktailItems = document.querySelectorAll('.cocktail-item');
-    const modal = document.querySelector('.cocktail-modal');
-    const modalContent = document.querySelector('.modal-content'); // Keep this selector
-    // const closeBtn = document.querySelector('.close-btn');     // Remove this line
-    const modalImage = document.querySelector('.modal-image');
-    const modalTitle = document.querySelector('.modal-title');
-    const modalIngredients = document.querySelector('.modal-ingredients');
-    const modalRecipe = document.querySelector('.modal-recipe');
 
-    cocktailItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const imageSrc = item.querySelector('img').src;
-            const title = item.querySelector('h3').textContent;
-            const ingredients = item.querySelector('p').textContent; // Replace with actual ingredients data
-            const recipe = "Your recipe goes here."; // Replace with actual recipe data
-
-            modalImage.src = imageSrc;
-            modalTitle.textContent = title;
-            modalIngredients.textContent = ingredients;
-            modalRecipe.textContent = recipe;
-
-            modal.classList.add('show'); // Show the modal
-        });
-    });
-
-    // Remove this entire block:
-    /*
-    closeBtn.addEventListener('click', () => {
-        modal.classList.remove('show'); // Hide the modal
-    });
-    */
-
-    // Close modal if clicked outside the content area (on the overlay)
-    modal.addEventListener('click', (event) => {
-        if (event.target === modal) { // Check if the click is on the overlay
-            modal.classList.remove('show');
-        }
-    });
-});
 
