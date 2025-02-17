@@ -28,12 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Close mobile menu if a link is clicked (on smaller screens)
     navMenu.addEventListener('click', (event) => {
-        if (window.innerWidth <= 768 && event.target.tagName === 'A') {  // Check screen size
+        if (window.innerWidth <= 768 && event.target.tagName === 'A') {
             navMenu.classList.remove('active');
             menuIcon.classList.remove('open');
         }
     });
-
 
     // Cocktail Modal
     const cocktailItems = document.querySelectorAll('.cocktail-item');
