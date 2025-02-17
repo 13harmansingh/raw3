@@ -142,22 +142,11 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(element);
     });
 });
-const menuLinks = document.querySelectorAll('nav ul li a');
-
-menuLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-        // Prevent default link behavior (if needed)
-        event.preventDefault();
-
-        // Add your click effect here (e.g., change color, scale, etc.)
-        link.style.color = 'green';
-    });
-});
 document.addEventListener('DOMContentLoaded', () => {
     const cocktailItems = document.querySelectorAll('.cocktail-item');
     const modal = document.querySelector('.cocktail-modal');
-    const modalContent = document.querySelector('.modal-content');
-    const closeBtn = document.querySelector('.close-btn');
+    const modalContent = document.querySelector('.modal-content'); // Keep this selector
+    // const closeBtn = document.querySelector('.close-btn');     // Remove this line
     const modalImage = document.querySelector('.modal-image');
     const modalTitle = document.querySelector('.modal-title');
     const modalIngredients = document.querySelector('.modal-ingredients');
@@ -179,13 +168,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Remove this entire block:
+    /*
     closeBtn.addEventListener('click', () => {
         modal.classList.remove('show'); // Hide the modal
     });
+    */
 
-    // Close modal if clicked outside the content area
+    // Close modal if clicked outside the content area (on the overlay)
     modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
+        if (event.target === modal) { // Check if the click is on the overlay
             modal.classList.remove('show');
         }
     });
