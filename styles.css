@@ -13,7 +13,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #fff;
-    color: #333; /* Default text color */
+    color: #333;
     line-height: 1.6;
 }
 
@@ -52,7 +52,7 @@ header nav ul {
     list-style: none;
     display: flex;
     padding: 0;
-    transition: transform 0.3s ease; /* For mobile menu */
+    transition: transform 0.3s ease;
 }
 
 header nav ul li {
@@ -78,7 +78,7 @@ header nav ul li a:hover {
 .hero {
     background: url('rooftop-bar.jpg') center/cover no-repeat; /* Replace with your image */
     height: 100vh;
-    color: #fff; /* White text for better contrast */
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +94,7 @@ header nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -117,7 +117,7 @@ header nav ul li a:hover {
 .cta-button {
     padding: 15px 40px;
     background-color: #ff6f61;
-    color: #fff; /* White text for contrast */
+    color: #fff;
     font-size: 1.1rem;
     font-weight: 500;
     border-radius: 5px;
@@ -274,7 +274,7 @@ header nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-.review-item h4 {
+.review-item h3 {
     font-size: 1.1rem;
     font-weight: 500;
 }
@@ -283,4 +283,6 @@ header nav ul li a:hover {
 .location {
     padding: 80px 40px;
     text-align: center;
-    opacity:
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.
