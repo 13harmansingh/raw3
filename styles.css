@@ -268,4 +268,28 @@ header nav ul li a:hover {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 350px;
-    text
+    text/* styles.css */
+
+
+/* Location Section */
+.location { /* ... (styles from previous responses) ... */ }
+.location h2 { /* ... */ }
+.map { /* ... */ }
+.map iframe { /* ... */ }
+
+/* Footer */
+footer { /* ... (styles from previous responses - ensure correct layout and spacing) ... */ }
+footer p { /* ... */ }
+.social-icons { /* ... */ }
+.social-icons a { /* ... */ }
+.social-icons a:hover { /* ... */ }
+
+/* Media Queries (Add as needed) */
+@media (max-width: 768px) {
+    /* Styles for smaller screens */
+}
+
+@media (max-width: 480px) {
+    /* Styles for even smaller screens */
+}
+
