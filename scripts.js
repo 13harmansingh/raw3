@@ -88,8 +88,7 @@
             ingredients: ["2 oz White Rum", "1 oz Fresh Lime Juice", "0.75 oz Simple Syrup", "6-8 Fresh Strawberries", "Strawberry for garnish"],
             recipe: "Combine all ingredients in a blender with ice. Blend until smooth. Pour into a chilled coupe or daiquiri glass. Garnish with a fresh strawberry."
         },
-        // ... add more cocktails here
-    };
+        
 document.addEventListener('DOMContentLoaded', () => {
     const cocktailItems = document.querySelectorAll('.cocktail-item');
     const modal = document.querySelector('.cocktail-modal');
@@ -116,12 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Remove this entire block:
-    /*
-    closeBtn.addEventListener('click', () => {
-        modal.classList.remove('show'); // Hide the modal
-    });
-    */
 
     // Close modal if clicked outside the content area (on the overlay)
     modal.addEventListener('click', (event) => {
